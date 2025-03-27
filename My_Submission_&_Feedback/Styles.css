@@ -1,0 +1,101 @@
+img {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: contain;
+}
+
+th, td {
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    padding-left: 0px;
+    padding-right: 40px;
+  }
+
+body {
+    background-color: azure;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 25px;
+    object-fit: scale-down;
+    overflow-wrap: break-word;
+}
+
+.command {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding-left: 12px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    object-fit: scale-down;
+    background-color: blanchedalmond;
+}
+
+.space {
+    margin-top: 1cm;
+}
+
+.test {
+    border: 2px solid black;
+    padding-left: 12px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    object-fit: scale-down;
+    background-color: lemonchiffon;
+}
+
+.appendix {
+    border: 2px solid black;
+    padding-left: 12px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    object-fit: scale-down;
+    background-color: rgb(233, 199, 224);
+}
+
+.output {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding-left: 12px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    object-fit: scale-down;
+    background-color: rgb(232, 238, 245);
+}
+
+.outputModel {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding-left: 12px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    object-fit: scale-down;
+    background-color: ghostwhite;
+}
+
+.marks {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding-left: 12px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    object-fit: scale-down;
+    background-color: white;
+}

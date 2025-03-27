@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html><link rel="stylesheet" href="Styles.css" /><a id="home"></a><head> 
+<h2>Module: <span style="color:Navy">MATH3036 - Scientific Computation and Numerical Analysis</span><br>
+Assessment:  <span style="color:Navy">Coursework 1</span></h2>
+<h4>Student Name:  <span style="color:Navy">Aylin Sadikhova</span><br>
+Student ID:  <span style="color:Navy">20517706</span><br>
+Marks Available:  <span style="color:Navy">100.0</span><br>
+Raw Mark:  <span style="color:Navy">92.0</span><br>
+Penalty: <span style="color:Navy">0% </span><br>
+Final Mark: <span style="color:blue">92.0</span></h4><br>
+</head> 
+<body> 
+<table>
+<tr>
+<td><b>Case</b></td>
+<th><b>Mark Obtained</b></th>
+</tr>
+<tr>
+<td><a href="#Q4CaseI">Q4 Case I</a></td><td><span style="color:green">6.0/6.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q4CaseII">Q4 Case II</a></td><td><span style="color:green">6.0/6.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q4CaseIII">Q4 Case III</a></td><td><span style="color:green">6.0/6.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q4CaseIV">Q4 Case IV</a></td><td><span style="color:green">2.0/2.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q5CaseI">Q5 Case I</a></td><td><span style="color:green">6.0/6.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q5CaseII">Q5 Case II</a></td><td><span style="color:green">3.0/3.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q5CaseIII">Q5 Case III</a></td><td><span style="color:green">9.0/9.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q5CaseIV">Q5 Case IV</a></td><td><span style="color:green">7.0/7.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q6CaseI">Q6 Case I</a></td><td><span style="color:green">15.0/15.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q6CaseII">Q6 Case II</a></td><td><span style="color:green">7.0/7.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q6CaseIII">Q6 Case III</a></td><td><span style="color:green">4.0/4.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q6CaseIV">Q6 Case IV</a></td><td><span style="color:green">4.0/4.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q7CaseI">Q7 Case I</a></td><td><span style="color:green">15.0/15.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q8CaseI">Q8 Case I</a></td><td><span style="color:green">2.0/4.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q8CaseII">Q8 Case II</a></td><td><span style="color:green">0.0/2.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q8CaseIII">Q8 Case III</a></td><td><span style="color:green">0.0/2.0</span></td>
+</tr>
+<tr>
+<td><a href="#Q8CaseIV">Q8 Case IV</a></td><td><span style="color:green">0.0/2.0</span></td>
+</tr>
+</table>
+<div class="space"></div>
+<a id="Q4CaseI">
+<p> <b>Case: Q4 Case I</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+doc_string_mat = DE.AssemblePGmatrixGenDE.__doc__<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 4-I: help(DE.AssemblePGmatrixGenDE)</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">doc_string_mat = </pre><pre><p style="margin-left:90px;">
+    Returns a numpy array of the
+    NxN Petrov-Galerkin matrix for the bilinear form
+       b(u,v) := \int_0^1 u' v + c u v dx
+    using trial space
+       Uh := {polynomials of degree at most N, and being = 0 for x=0},
+    with basis { x, (x**2)/2, (x**3)/3,..., (x**N)/N }
+    and using the test space
+       Vh := {polynomials of degree at most N-1}
+    with basis { 1, x, x**2,..., x**(N-1) }
+
+    Parameters
+    ----------
+    N : integer
+        Degree of polynomial approximation.
+    c : float
+        Constant in front of the u v term in the PG integral.
+    
+    Returns
+    -------
+    A: numpy.ndarray, shape (N,N)
+       Array containing the Petrov-Galerkin matrix.
+
+    </p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">doc_string_mat = </p></pre><pre><p style="margin-left:90px;">
+    Returns a numpy array of the 
+    NxN Petrov-Galerkin matrix for the bilinear form
+       b(u,v) := \int_0^1 u' v + c u v dx 
+    using trial space 
+       Uh := {polynomials of degree at most N, and being = 0 for x=0}, 
+    with basis { x, (x**2)/2, (x**3)/3,..., (x**N)/N } 
+    and using the test space
+       Vh := {polynomials of degree at most N-1}
+    with basis { 1, x, x**2,..., x**(N-1) }
+    
+    Parameters
+    ----------
+    N : integer
+        Degree of the polynomial approximation.
+    c : real number
+        Parameter in the differential equation.
+    
+    Returns
+    -------
+    A: numpy.ndarray, shape (N,N)
+       Array containing the Petrov-Galerkin matrix.
+
+    </p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 6.0/6.0</h3>
+<p style="color:green"> Comment: Excellent doc_string!</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q4CaseII">
+<p> <b>Case: Q4 Case II</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+n = 100<br>
+c = 4<br>
+def f(x): return np.ones(np.shape(x))<br>
+N = 3<br>
+A = DE.AssemblePGmatrixGenDE(N,c)<br>
+b = DE.AssemblePGvector(N,f,n)<br>
+u = np.linalg.solve(A,b)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 4-II: A</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A = </pre><pre><p style="margin-left:90px;">[[3.         1.16666667 0.66666667]<br> [1.83333333 0.83333333 0.51666667]<br> [1.33333333 0.65       0.42222222]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A = </p></pre><pre><p style="margin-left:90px;">[[3.         1.16666667 0.66666667]<br> [1.83333333 0.83333333 0.51666667]<br> [1.33333333 0.65       0.42222222]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 4-II: b</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">b = </pre><pre><p style="margin-left:90px;">[1.       0.5      0.333325]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">b = </p></pre><pre><p style="margin-left:90px;">[1.       0.5      0.333325]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 4-II: u</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">u = </pre><pre><p style="margin-left:90px;">[ 0.89593831 -2.33651299  1.55717532]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">u = </p></pre><pre><p style="margin-left:90px;">[ 0.89593831 -2.33651299  1.55717532]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q4CaseIII">
+<p> <b>Case: Q4 Case III</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+n = 200<br>
+c = 1<br>
+def f(x): return np.sin(np.pi*x)<br>
+N = 8<br>
+A = DE.AssemblePGmatrixGenDE(N,c)<br>
+b = DE.AssemblePGvector(N,f,n)<br>
+A_shape = np.shape(A)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 4-III: A_shape</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A_shape = </pre><pre><p style="margin-left:90px;">(8, 8)</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A_shape = </p></pre><pre><p style="margin-left:90px;">(8, 8)</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 4-III: A</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A = </pre><pre><p style="margin-left:90px;">[[1.5        0.66666667 0.41666667 0.3        0.23333333 0.19047619<br>  0.16071429 0.13888889]<br> [0.83333333 0.45833333 0.31666667 0.24166667 0.1952381  0.16369048<br>  0.14087302 0.12361111]<br> [0.58333333 0.35       0.25555556 0.20238095 0.16785714 0.14351852<br>  0.12539683 0.11136364]<br> [0.45       0.28333333 0.21428571 0.17410714 0.14722222 0.12777778<br>  0.11298701 0.10132576]<br> [0.36666667 0.23809524 0.18452381 0.15277778 0.13111111 0.11515152<br>  0.10281385 0.09294872]<br> [0.30952381 0.20535714 0.16203704 0.13611111 0.11818182 0.10479798<br>  0.09432234 0.08585165]<br> [0.26785714 0.18055556 0.14444444 0.12272727 0.10757576 0.09615385<br>  0.08712716 0.0797619 ]<br> [0.23611111 0.16111111 0.13030303 0.11174242 0.09871795 0.08882784<br>  0.08095238 0.07447917]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A = </p></pre><pre><p style="margin-left:90px;">[[1.5        0.66666667 0.41666667 0.3        0.23333333 0.19047619<br>  0.16071429 0.13888889]<br> [0.83333333 0.45833333 0.31666667 0.24166667 0.1952381  0.16369048<br>  0.14087302 0.12361111]<br> [0.58333333 0.35       0.25555556 0.20238095 0.16785714 0.14351852<br>  0.12539683 0.11136364]<br> [0.45       0.28333333 0.21428571 0.17410714 0.14722222 0.12777778<br>  0.11298701 0.10132576]<br> [0.36666667 0.23809524 0.18452381 0.15277778 0.13111111 0.11515152<br>  0.10281385 0.09294872]<br> [0.30952381 0.20535714 0.16203704 0.13611111 0.11818182 0.10479798<br>  0.09432234 0.08585165]<br> [0.26785714 0.18055556 0.14444444 0.12272727 0.10757576 0.09615385<br>  0.08712716 0.0797619 ]<br> [0.23611111 0.16111111 0.13030303 0.11174242 0.09871795 0.08882784<br>  0.08095238 0.07447917]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 4-III: b</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">b = </pre><pre><p style="margin-left:90px;">[0.63662632 0.31831316 0.18930702 0.12480395 0.0881474  0.06541411<br> 0.05038714 0.03995802]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">b = </p></pre><pre><p style="margin-left:90px;">[0.63662632 0.31831316 0.18930702 0.12480395 0.0881474  0.06541411<br> 0.05038714 0.03995802]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q4CaseIV">
+<p> <b>Case: Q4 Case IV</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+N = 13<br>
+def f(x): return x<br>
+n = 10<br>
+b = DE.AssemblePGvector(N,f,n)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 4-IV: b</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">b = </pre><pre><p style="margin-left:90px;">[0.5        0.3325     0.24875    0.19833625 0.16459063 0.1403717<br> 0.12210877 0.1078184  0.09631077 0.08682896 0.07886855 0.07208048<br> 0.06621557]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">b = </p></pre><pre><p style="margin-left:90px;">[0.5        0.3325     0.24875    0.19833625 0.16459063 0.1403717<br> 0.12210877 0.1078184  0.09631077 0.08682896 0.07886855 0.07208048<br> 0.06621557]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q5CaseI">
+<p> <b>Case: Q5 Case I</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+doc_string_mat = DE.AssembleFEMmatrix.__doc__<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 5-I: help(DE.AssembleFEMmatrix)</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">doc_string_mat = </pre><pre><p style="margin-left:90px;">
+    Returns a numpy array of the
+    (N-1)x(N-1) Galerkin FEM matrix for the bilinear form
+       b(u,v) := \int_0^1 u' v' + c u v dx
+    using trial space
+       Uh := {continuous piecewise linears, equal to 0 at x = 0 and x = 1},
+    with basis of the usual hat functions \phi_j(x_i) = 1 when i = j and 0 otherwise
+    using FEM test space
+       Vh := continuous piecewise linears,
+             and being = 0 for x=0 and x=1,
+    with basis { psi_i } being the hat function (node-wise),
+    for a uniform mesh with N+1 grid-nodes.
+
+    Parameters
+    ----------
+    N : integer
+        N - 1 is the number of basis functions.
+    c : float
+        Non-negative constant in front of the u v term in the differential equation.
+    
+    Returns
+    -------
+    A: numpy.ndarray, shape (N-1,N-1)
+        Array containing the Petrov-Galerkin matrix.
+
+    </p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">doc_string_mat = </p></pre><pre><p style="margin-left:90px;">
+    Returns a numpy array of the 
+    Galerkin FEM matrix for the bilinear form
+       b(u,v) := \int_0^1 u' v' + c u v dx 
+    using FEM trial and test space 
+       Vh := continuous piecewise linears, 
+             and being = 0 for x=0 and x=1, 
+    with basis { phi_j } being the hat functions (node-wise), 
+    for a uniform mesh with N-1 interior grid-nodes.  
+    
+    Parameters
+    ----------
+    N : integer
+        N-1 is the number of interior nodes in the mesh.
+    c : nonnegative real number 
+        Parameter in the differential equation.
+        
+    Returns
+    -------
+    A : numpy.ndarray, shape (N-1,N-1)
+        Array containing the Galerkin FEM matrix.
+    
+    </p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 6.0/6.0</h3>
+<p style="color:green"> Comment: Excellent doc_string!</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q5CaseII">
+<p> <b>Case: Q5 Case II</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+def f(x): return np.sin(np.pi*x)<br>
+N = 4<br>
+b = DE.AssembleFEMvector(N,f)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 5-II: b</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">b = </pre><pre><p style="margin-left:90px;">[0.16332037 0.23096988 0.16332037]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">b = </p></pre><pre><p style="margin-left:90px;">[0.16332037 0.23096988 0.16332037]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q5CaseIII">
+<p> <b>Case: Q5 Case III</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+c = 6<br>
+def f(x): return np.ones(np.shape(x))<br>
+N = 4<br>
+A = DE.AssembleFEMmatrix(N,c)<br>
+b = DE.AssembleFEMvector(N,f)<br>
+u = np.linalg.solve(A,b)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 5-III: A</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A = </pre><pre><p style="margin-left:90px;">[[ 9.   -3.75  0.  ]<br> [-3.75  9.   -3.75]<br> [ 0.   -3.75  9.  ]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A = </p></pre><pre><p style="margin-left:90px;">[[ 9.   -3.75  0.  ]<br> [-3.75  9.   -3.75]<br> [ 0.   -3.75  9.  ]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 5-III: b</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">b = </pre><pre><p style="margin-left:90px;">[0.25 0.25 0.25]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">b = </p></pre><pre><p style="margin-left:90px;">[0.25 0.25 0.25]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 5-III: u</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">u = </pre><pre><p style="margin-left:90px;">[0.06028369 0.07801418 0.06028369]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">u = </p></pre><pre><p style="margin-left:90px;">[0.06028369 0.07801418 0.06028369]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q5CaseIV">
+<p> <b>Case: Q5 Case IV</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+c = 1<br>
+def f(x): return np.cos(np.pi*x)<br>
+N = 8<br>
+A = DE.AssembleFEMmatrix(N,c)<br>
+b = DE.AssembleFEMvector(N,f)<br>
+A_shape = np.shape(A)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 5-IV: A_shape</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A_shape = </pre><pre><p style="margin-left:90px;">(7, 7)</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A_shape = </p></pre><pre><p style="margin-left:90px;">(7, 7)</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 1.0/1.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 5-IV: A</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A = </pre><pre><p style="margin-left:90px;">[[16.08333333 -7.97916667  0.          0.          0.          0.<br>   0.        ]<br> [-7.97916667 16.08333333 -7.97916667  0.          0.          0.<br>   0.        ]<br> [ 0.         -7.97916667 16.08333333 -7.97916667  0.          0.<br>   0.        ]<br> [ 0.          0.         -7.97916667 16.08333333 -7.97916667  0.<br>   0.        ]<br> [ 0.          0.          0.         -7.97916667 16.08333333 -7.97916667<br>   0.        ]<br> [ 0.          0.          0.          0.         -7.97916667 16.08333333<br>  -7.97916667]<br> [ 0.          0.          0.          0.          0.         -7.97916667<br>  16.08333333]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A = </p></pre><pre><p style="margin-left:90px;">[[16.08333333 -7.97916667  0.          0.          0.          0.<br>   0.        ]<br> [-7.97916667 16.08333333 -7.97916667  0.          0.          0.<br>   0.        ]<br> [ 0.         -7.97916667 16.08333333 -7.97916667  0.          0.<br>   0.        ]<br> [ 0.          0.         -7.97916667 16.08333333 -7.97916667  0.<br>   0.        ]<br> [ 0.          0.          0.         -7.97916667 16.08333333 -7.97916667<br>   0.        ]<br> [ 0.          0.          0.          0.         -7.97916667 16.08333333<br>  -7.97916667]<br> [ 0.          0.          0.          0.          0.         -7.97916667<br>  16.08333333]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 5-IV: b</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">b = </pre><pre><p style="margin-left:90px;">[ 1.13265931e-01  8.66899903e-02  4.69162847e-02  6.93889390e-18<br> -4.69162847e-02 -8.66899903e-02 -1.13265931e-01]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">b = </p></pre><pre><p style="margin-left:90px;">[ 1.13265931e-01  8.66899903e-02  4.69162847e-02  6.93889390e-18<br> -4.69162847e-02 -8.66899903e-02 -1.13265931e-01]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q6CaseI">
+<p> <b>Case: Q6 Case I</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+alpha = 1/2<br>
+N = 8<br>
+tau = 0.02<br>
+Ntime = 16<br>
+def u0_func(x): return 3*x*(1-x) + np.sin(2*np.pi*x)<br>
+u0_vec = DE.AssembleVector_u0(N,u0_func)<br>
+M = DE.AssembleMatrix_M(N)<br>
+K = DE.AssembleMatrix_K(N)<br>
+u_array = DE.HeatEqFEM(tau,alpha,Ntime,N,u0_func)<br>
+M_shape = np.shape(M)<br>
+u_array_shape = np.shape(u_array)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-I: u0_vec</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">u0_vec = </pre><pre><p style="margin-left:90px;">[ 1.05704103  1.58996228  1.43107453  0.75386598 -0.01685095 -0.45771357<br> -0.39088446]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">u0_vec = </p></pre><pre><p style="margin-left:90px;">[ 1.05704103  1.58996228  1.43107453  0.75386598 -0.01685095 -0.45771357<br> -0.39088446]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-I: M_shape</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">M_shape = </pre><pre><p style="margin-left:90px;">(7, 7)</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">M_shape = </p></pre><pre><p style="margin-left:90px;">(7, 7)</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-I: M</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">M = </pre><pre><p style="margin-left:90px;">[[0.08333333 0.02083333 0.         0.         0.         0.<br>  0.        ]<br> [0.02083333 0.08333333 0.02083333 0.         0.         0.<br>  0.        ]<br> [0.         0.02083333 0.08333333 0.02083333 0.         0.<br>  0.        ]<br> [0.         0.         0.02083333 0.08333333 0.02083333 0.<br>  0.        ]<br> [0.         0.         0.         0.02083333 0.08333333 0.02083333<br>  0.        ]<br> [0.         0.         0.         0.         0.02083333 0.08333333<br>  0.02083333]<br> [0.         0.         0.         0.         0.         0.02083333<br>  0.08333333]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">M = </p></pre><pre><p style="margin-left:90px;">[[0.08333333 0.02083333 0.         0.         0.         0.<br>  0.        ]<br> [0.02083333 0.08333333 0.02083333 0.         0.         0.<br>  0.        ]<br> [0.         0.02083333 0.08333333 0.02083333 0.         0.<br>  0.        ]<br> [0.         0.         0.02083333 0.08333333 0.02083333 0.<br>  0.        ]<br> [0.         0.         0.         0.02083333 0.08333333 0.02083333<br>  0.        ]<br> [0.         0.         0.         0.         0.02083333 0.08333333<br>  0.02083333]<br> [0.         0.         0.         0.         0.         0.02083333<br>  0.08333333]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-I: K</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">K = </pre><pre><p style="margin-left:90px;">[[16. -8.  0.  0.  0.  0.  0.]<br> [-8. 16. -8.  0.  0.  0.  0.]<br> [ 0. -8. 16. -8.  0.  0.  0.]<br> [ 0.  0. -8. 16. -8.  0.  0.]<br> [ 0.  0.  0. -8. 16. -8.  0.]<br> [ 0.  0.  0.  0. -8. 16. -8.]<br> [ 0.  0.  0.  0.  0. -8. 16.]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">K = </p></pre><pre><p style="margin-left:90px;">[[16. -8.  0.  0.  0.  0.  0.]<br> [-8. 16. -8.  0.  0.  0.  0.]<br> [ 0. -8. 16. -8.  0.  0.  0.]<br> [ 0.  0. -8. 16. -8.  0.  0.]<br> [ 0.  0.  0. -8. 16. -8.  0.]<br> [ 0.  0.  0.  0. -8. 16. -8.]<br> [ 0.  0.  0.  0.  0. -8. 16.]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-I: u_array_shape</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">u_array_shape = </pre><pre><p style="margin-left:90px;">(17, 7)</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">u_array_shape = </p></pre><pre><p style="margin-left:90px;">(17, 7)</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-I: u_array</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">u_array = </pre><pre><p style="margin-left:90px;">[[ 1.05704103  1.58996228  1.43107453  0.75386598 -0.01685095 -0.45771357<br>  -0.39088446]<br> [ 0.79805942  1.23352382  1.15954394  0.6944152   0.1366117  -0.21312083<br>  -0.22487282]<br> [ 0.61510537  0.97136242  0.95313912  0.63657777  0.23045664 -0.05066494<br>  -0.1075771 ]<br> [ 0.48287506  0.7775341   0.79455596  0.58159158  0.28399432  0.0554909<br>  -0.02768657]<br> [ 0.38576902  0.63265768  0.67122898  0.53023141  0.31052675  0.12254769<br>   0.02506678]<br> [ 0.31343059  0.52293502  0.57398221  0.48280692  0.31915283  0.16255186<br>   0.05860121]<br> [ 0.25876216  0.43862137  0.49614797  0.43931436  0.31611578  0.18401742<br>   0.07872998]<br> [ 0.21682272  0.37282372  0.43289047  0.3995823   0.30570111  0.1929508<br>   0.08963336]<br> [ 0.18413955  0.32064623  0.38069843  0.36336423  0.29084152  0.19356937<br>   0.09428264]<br> [ 0.15825453  0.27859452  0.33701348  0.33038904  0.27353126  0.1888171<br>   0.0947723 ]<br> [ 0.13741696  0.24416107  0.29996164  0.30038629  0.25511264  0.18073501<br>   0.09256796]<br> [ 0.12037244  0.21553563  0.26816041  0.27309805  0.23647543  0.17072631<br>   0.08868746]<br> [ 0.10621645  0.19140236  0.24058081  0.24828374  0.21819597  0.15974541<br>   0.0838316 ]<br> [ 0.09429214  0.17079719  0.21644886  0.22572159  0.20063438  0.14843214<br>   0.07847766]<br> [ 0.08411869  0.15300723  0.19517523  0.20520845  0.1840026   0.13720675<br>   0.07294606]<br> [ 0.07534087  0.13749977  0.17630506  0.18655887  0.16841181  0.12633702<br>   0.06744761]<br> [ 0.06769343  0.12387186  0.15948201  0.16960386  0.15390558  0.11598558<br>   0.062117  ]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">u_array = </p></pre><pre><p style="margin-left:90px;">[[ 1.05704103  1.58996228  1.43107453  0.75386598 -0.01685095 -0.45771357<br>  -0.39088446]<br> [ 0.79805942  1.23352382  1.15954394  0.6944152   0.1366117  -0.21312083<br>  -0.22487282]<br> [ 0.61510537  0.97136242  0.95313912  0.63657777  0.23045664 -0.05066494<br>  -0.1075771 ]<br> [ 0.48287506  0.7775341   0.79455596  0.58159158  0.28399432  0.0554909<br>  -0.02768657]<br> [ 0.38576902  0.63265768  0.67122898  0.53023141  0.31052675  0.12254769<br>   0.02506678]<br> [ 0.31343059  0.52293502  0.57398221  0.48280692  0.31915283  0.16255186<br>   0.05860121]<br> [ 0.25876216  0.43862137  0.49614797  0.43931436  0.31611578  0.18401742<br>   0.07872998]<br> [ 0.21682272  0.37282372  0.43289047  0.3995823   0.30570111  0.1929508<br>   0.08963336]<br> [ 0.18413955  0.32064623  0.38069843  0.36336423  0.29084152  0.19356937<br>   0.09428264]<br> [ 0.15825453  0.27859452  0.33701348  0.33038904  0.27353126  0.1888171<br>   0.0947723 ]<br> [ 0.13741696  0.24416107  0.29996164  0.30038629  0.25511264  0.18073501<br>   0.09256796]<br> [ 0.12037244  0.21553563  0.26816041  0.27309805  0.23647543  0.17072631<br>   0.08868746]<br> [ 0.10621645  0.19140236  0.24058081  0.24828374  0.21819597  0.15974541<br>   0.0838316 ]<br> [ 0.09429214  0.17079719  0.21644886  0.22572159  0.20063438  0.14843214<br>   0.07847766]<br> [ 0.08411869  0.15300723  0.19517523  0.20520845  0.1840026   0.13720675<br>   0.07294606]<br> [ 0.07534087  0.13749977  0.17630506  0.18655887  0.16841181  0.12633702<br>   0.06744761]<br> [ 0.06769343  0.12387186  0.15948201  0.16960386  0.15390558  0.11598558<br>   0.062117  ]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q6CaseII">
+<p> <b>Case: Q6 Case II</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+alpha = 1.<br>
+N = 4<br>
+tau = 0.001<br>
+Ntime = 2<br>
+def u0_func(x): return x*(x<0.5) + (1-x)*(x>=.5)<br>
+u0_vec = DE.AssembleVector_u0(N,u0_func)<br>
+M = DE.AssembleMatrix_M(N)<br>
+K = DE.AssembleMatrix_K(N)<br>
+u_array = DE.HeatEqFEM(tau,alpha,Ntime,N,u0_func)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-II: u0_vec</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">u0_vec = </pre><pre><p style="margin-left:90px;">[0.26785714 0.42857143 0.26785714]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">u0_vec = </p></pre><pre><p style="margin-left:90px;">[0.26785714 0.42857143 0.26785714]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 3.0/3.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-II: u_array</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">u_array = </pre><pre><p style="margin-left:90px;">[[0.26785714 0.42857143 0.26785714]<br> [0.26690204 0.4216224  0.26690204]<br> [0.26575444 0.41503093 0.26575444]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">u_array = </p></pre><pre><p style="margin-left:90px;">[[0.26785714 0.42857143 0.26785714]<br> [0.26690204 0.4216224  0.26690204]<br> [0.26575444 0.41503093 0.26575444]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 4.0/4.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q6CaseIII">
+<p> <b>Case: Q6 Case III</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+alpha = 0.<br>
+N = 3<br>
+tau = 0.2<br>
+Ntime = 5<br>
+def u0_func(x): return x*(x<0.5) + (1-x)*(x>=.5)<br>
+u0_vec = DE.AssembleVector_u0(N,u0_func)<br>
+M = DE.AssembleMatrix_M(N)<br>
+K = DE.AssembleMatrix_K(N)<br>
+u_array = DE.HeatEqFEM(tau,alpha,Ntime,N,u0_func)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-III: u_array</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">u_array = </pre><pre><p style="margin-left:90px;">[[0.4 0.4]<br> [0.4 0.4]<br> [0.4 0.4]<br> [0.4 0.4]<br> [0.4 0.4]<br> [0.4 0.4]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">u_array = </p></pre><pre><p style="margin-left:90px;">[[0.4 0.4]<br> [0.4 0.4]<br> [0.4 0.4]<br> [0.4 0.4]<br> [0.4 0.4]<br> [0.4 0.4]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 4.0/4.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q6CaseIV">
+<p> <b>Case: Q6 Case IV</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+N = 4<br>
+def u0_func(x): return np.exp(x)<br>
+u0_vec = DE.AssembleVector_u0(N,u0_func)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 6-IV: u0_vec</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">u0_vec = </pre><pre><p style="margin-left:90px;">[1.59622874 1.37950465 2.85546478]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">u0_vec = </p></pre><pre><p style="margin-left:90px;">[1.59622874 1.37950465 2.85546478]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 4.0/4.0</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q7CaseI">
+<p> <b>Case: Q7 Case I</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+N = 6<br>
+A = DE.Assemble2dFEMmatrixN6()<br>
+b = DE.Assemble2dFEMvector(N)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 7-I: A</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A = </pre><pre><p style="margin-left:90px;">[[ 4 -1  0  0 -1  0  0  0  0  0]<br> [-1  4 -1  0  0 -1  0  0  0  0]<br> [ 0 -1  4 -1  0  0 -1  0  0  0]<br> [ 0  0 -1  4  0  0  0  0  0  0]<br> [-1  0  0  0  4 -1  0 -1  0  0]<br> [ 0 -1  0  0 -1  4 -1  0 -1  0]<br> [ 0  0 -1  0  0 -1  4  0  0  0]<br> [ 0  0  0  0 -1  0  0  4 -1 -1]<br> [ 0  0  0  0  0 -1  0 -1  4  0]<br> [ 0  0  0  0  0  0  0 -1  0  4]]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A = </p></pre><pre><p style="margin-left:90px;">[[ 4. -1.  0.  0. -1. -0. -0.  0.  0.  0.]<br> [-1.  4. -1.  0. -0. -1. -0.  0.  0.  0.]<br> [ 0. -1.  4. -1. -0. -0. -1.  0.  0.  0.]<br> [ 0.  0. -1.  4. -0. -0. -0.  0.  0.  0.]<br> [-1. -0. -0. -0.  4. -1.  0. -1. -0.  0.]<br> [-0. -1. -0. -0. -1.  4. -1. -0. -1.  0.]<br> [-0. -0. -1. -0.  0. -1.  4. -0. -0.  0.]<br> [ 0.  0.  0.  0. -1. -0. -0.  4. -1. -1.]<br> [ 0.  0.  0.  0. -0. -1. -0. -1.  4. -0.]<br> [ 0.  0.  0.  0.  0.  0.  0. -1. -0.  4.]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 8.0/8</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 7-I: b</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">b = </pre><pre><p style="margin-left:90px;">[0.02777778 0.02777778 0.02777778 0.02777778 0.02777778 0.02777778<br> 0.02777778 0.02777778 0.02777778 0.02777778]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">b = </p></pre><pre><p style="margin-left:90px;">[0.02777778 0.02777778 0.02777778 0.02777778 0.02777778 0.02777778<br> 0.02777778 0.02777778 0.02777778 0.02777778]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 7.0/7</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q8CaseI">
+<p> <b>Case: Q8 Case I</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+N = 13<br>
+A = DE.Assemble2dFEMmatrix(N)<br>
+<span style="color:red"> Error Raised: name 'A' is not defined</span><br>
+b = DE.Assemble2dFEMvector(N)<br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 8-I: A</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A = </pre><pre><p style="margin-left:90px;">None</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A = </p></pre><pre><p style="margin-left:90px;">[[ 4. -1.  0. ...  0.  0.  0.]<br> [-1.  4. -1. ...  0.  0.  0.]<br> [ 0. -1.  4. ...  0.  0.  0.]<br> ...<br> [ 0.  0.  0. ...  4. -1. -1.]<br> [ 0.  0.  0. ... -1.  4. -0.]<br> [ 0.  0.  0. ... -1. -0.  4.]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 0.0/2</h3>
+<p style="color:green"> Comment: No outputs produced for Q8 Case I Test 8-I: A. No marks obtained.</p>
+</div>
+</div>
+<div class="space"></div>
+<div class="test"><h3>Test 8-II: b</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">b = </pre><pre><p style="margin-left:90px;">[0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716]</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">b = </p></pre><pre><p style="margin-left:90px;">[0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716<br> 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716 0.00591716]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 2.0/2</h3>
+<p style="color:green"> Comment: Correct.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q8CaseII">
+<p> <b>Case: Q8 Case II</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+N = 4<br>
+A = DE.Assemble2dFEMmatrix(N)<br>
+<span style="color:red"> Error Raised: name 'A' is not defined</span><br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 8-II: A</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A = </pre><pre><p style="margin-left:90px;">None</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A = </p></pre><pre><p style="margin-left:90px;">[[ 4. -1. -1.]<br> [-1.  4. -0.]<br> [-1. -0.  4.]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 0.0/2</h3>
+<p style="color:green"> Comment: No outputs produced for Q8 Case II Test 8-II: A. No marks obtained.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q8CaseIII">
+<p> <b>Case: Q8 Case III</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+N = 5<br>
+A = DE.Assemble2dFEMmatrix(N)<br>
+<span style="color:red"> Error Raised: name 'A' is not defined</span><br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 8-III: A</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A = </pre><pre><p style="margin-left:90px;">None</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A = </p></pre><pre><p style="margin-left:90px;">[[ 4. -1.  0. -1. -0.  0.]<br> [-1.  4. -1. -0. -1.  0.]<br> [ 0. -1.  4. -0. -0.  0.]<br> [-1. -0. -0.  4. -1. -1.]<br> [-0. -1. -0. -1.  4. -0.]<br> [ 0.  0.  0. -1. -0.  4.]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 0.0/2</h3>
+<p style="color:green"> Comment: No outputs produced for Q8 Case III Test 8-III: A. No marks obtained.</p>
+</div>
+</div>
+<div class="space"></div>
+<a id="Q8CaseIV">
+<p> <b>Case: Q8 Case IV</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#home">home</a></b><br></p>
+<div class="command"><h3> Commands Executed: </h3>
+<p style="margin-left:60px;"<tt><tt>import DEtools as DE<br>
+N = 6<br>
+A = DE.Assemble2dFEMmatrix(N)<br>
+<span style="color:red"> Error Raised: name 'A' is not defined</span><br>
+</tt></tt></p></div>
+<div class="space"></div>
+<div class="test"><h3>Test 8-IV: A</h3>
+<div class="space"></div>
+<div class="output"><h4> Student Output:</h4>
+<pre><p style="margin-left:60px;">A = </pre><pre><p style="margin-left:90px;">None</p></pre></div>
+<div class="space"></div>
+<div class="outputModel"><h4> Model Output:</h4>
+<pre><p style="margin-left:60px;">A = </p></pre><pre><p style="margin-left:90px;">[[ 4. -1.  0.  0. -1. -0. -0.  0.  0.  0.]<br> [-1.  4. -1.  0. -0. -1. -0.  0.  0.  0.]<br> [ 0. -1.  4. -1. -0. -0. -1.  0.  0.  0.]<br> [ 0.  0. -1.  4. -0. -0. -0.  0.  0.  0.]<br> [-1. -0. -0. -0.  4. -1.  0. -1. -0.  0.]<br> [-0. -1. -0. -0. -1.  4. -1. -0. -1.  0.]<br> [-0. -0. -1. -0.  0. -1.  4. -0. -0.  0.]<br> [ 0.  0.  0.  0. -1. -0. -0.  4. -1. -1.]<br> [ 0.  0.  0.  0. -0. -1. -0. -1.  4. -0.]<br> [ 0.  0.  0.  0.  0.  0.  0. -1. -0.  4.]]</p></pre></div>
+<div class="space"></div>
+<div class="marks">
+<h3 style="color:green"> Marks: 0.0/2</h3>
+<p style="color:green"> Comment: No outputs produced for Q8 Case IV Test 8-IV: A. No marks obtained.</p>
+</div>
+</div>
+<div class="space"></div>
+</body> 
+</html> 
